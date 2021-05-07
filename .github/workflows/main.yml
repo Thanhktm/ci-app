@@ -32,8 +32,8 @@ jobs:
         configuration-cache-enabled: true
         arguments: assembleDebug
     - name: Upload to slack step
-      uses: adrey/slack-file-upload-action@master
+      uses: adrey/slack-file-upload-action@1.0.5
       with:
-        token: xoxb-477257406901-2020818357207-7AzzzFWAsEx4aUrCfHFBej0l
+        token: ${{ secrets.SLACK_TOKEN }}
         path: app/build/outputs/apk/debug/app-debug.apk
         channel: app
